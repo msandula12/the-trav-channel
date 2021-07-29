@@ -18,7 +18,7 @@
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0.1);
   font-size: clamp(8rem, 20vw, 16rem);
-  line-height: clamp(7rem, 18vw, 16rem);
+  line-height: clamp(7rem, 18vw, 14rem);
   -webkit-text-stroke: 4px var(--colorSecondary);
   -webkit-text-fill-color: transparent;
 }
