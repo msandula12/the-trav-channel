@@ -6,7 +6,6 @@
 }
 
 .logo {
-  animation: zoomIn 0.6s ease-out forwards;
   font-family: 'Ultra', serif;
 }
 
@@ -26,15 +25,4 @@
   line-height: clamp(7rem, 18vw, 14rem);
   -webkit-text-stroke: 0.5rem var(--colorSecondary);
   -webkit-text-fill-color: transparent;
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.1);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
