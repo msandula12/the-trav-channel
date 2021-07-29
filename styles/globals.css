@@ -6,6 +6,7 @@
 html,
 body {
   background-color: var(--colorPrimary);
+  color: #333;
   font-family: 'Ultra', serif;
   margin: 0;
   padding: 0;
