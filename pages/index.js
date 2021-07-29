@@ -12,9 +12,9 @@ const Home = () => {
 
       <main className={styles.home}>
         <div>
-          <div className={styles.the}>the</div>
-          <div className={styles.trav}>trav</div>
-          <div className={styles.channel}>channel</div>
+          <div className={styles.logoTextPlain}>the</div>
+          <div className={styles.logoTextGif}>trav</div>
+          <div className={styles.logoTextPlain}>channel</div>
         </div>
       </main>
     </>
