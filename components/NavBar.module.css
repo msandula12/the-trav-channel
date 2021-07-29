@@ -1,0 +1,24 @@
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navLink:not(:first-of-type) {
+  margin-left: 2rem;
+}
+
+.navLink {
+  padding: 0.5rem;
+  transition: box-shadow 0.2s ease-in, color 0.2s ease-in;
+}
+
+.navLink:hover {
+  box-shadow: 0 4px 0 #000;
+}
+
+.navLink.active {
+  box-shadow: 0 4px 0 var(--colorSecondary);
+  color: var(--colorSecondary);
+}
