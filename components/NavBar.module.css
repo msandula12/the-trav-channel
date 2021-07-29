@@ -1,8 +1,8 @@
 .navList {
-  list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .navListItem:not(:first-of-type) {
@@ -10,6 +10,7 @@
 }
 
 .navLink {
+  font-family: 'Ultra', serif;
   padding: 0.5rem;
   transition: box-shadow 0.2s ease-in, color 0.2s ease-in;
 }

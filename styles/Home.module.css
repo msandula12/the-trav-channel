@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.logo {
+  font-family: 'Ultra', serif;
+}
+
 .logoTextPlain {
   color: var(--colorSecondary);
   font-size: clamp(4rem, 10vw, 8rem);
@@ -19,6 +23,6 @@
   color: rgba(0, 0, 0, 0.1);
   font-size: clamp(8rem, 20vw, 16rem);
   line-height: clamp(7rem, 18vw, 14rem);
-  -webkit-text-stroke: 4px var(--colorSecondary);
+  -webkit-text-stroke: 0.5rem var(--colorSecondary);
   -webkit-text-fill-color: transparent;
 }
