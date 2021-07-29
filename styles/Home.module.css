@@ -7,8 +7,8 @@
 
 .logoTextPlain {
   color: var(--colorSecondary);
-  font-size: 72px;
-  line-height: 72px;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: clamp(4rem, 10vw, 8rem);
 }
 
 .logoTextGif {
@@ -17,8 +17,8 @@
   background-position: center;
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0.1);
-  font-size: 141px;
-  line-height: 130px;
+  font-size: clamp(8rem, 20vw, 16rem);
+  line-height: clamp(7rem, 18vw, 16rem);
   -webkit-text-stroke: 4px var(--colorSecondary);
   -webkit-text-fill-color: transparent;
 }
