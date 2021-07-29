@@ -33,14 +33,15 @@ const NavBar = () => {
     <nav>
       <ul className={styles.navList}>
         {menu.map((page) => (
-          <li
-            key={page.title}
-            className={`${styles.navLink} ${
-              router.pathname === page.path ? styles.active : ''
-            }`}
-          >
+          <li key={page.title} className={styles.navListItem}>
             <Link href={page.path}>
-              <a>{page.title}</a>
+              <a
+                className={`${styles.navLink} ${
+                  router.pathname === page.path ? styles.active : ''
+                }`}
+              >
+                {page.title}
+              </a>
             </Link>
           </li>
         ))}
