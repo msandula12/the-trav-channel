@@ -11,11 +11,12 @@ const Blog = () => {
       <div className="image-wrapper zoom-in">
         <Image
           alt={attribution}
-          src={BackpackImg}
-          layout="responsive"
-          width={300}
           height={300}
+          layout="responsive"
+          priority={true}
+          src={BackpackImg}
           title={attribution}
+          width={300}
         />
       </div>
     </main>

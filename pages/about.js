@@ -11,11 +11,12 @@ const About = () => {
       <div className="image-wrapper zoom-in">
         <Image
           alt={attribution}
-          src={MountainImg}
-          layout="responsive"
-          width={300}
           height={300}
+          layout="responsive"
+          priority={true}
+          src={MountainImg}
           title={attribution}
+          width={300}
         />
       </div>
     </main>
