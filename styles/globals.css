@@ -1,9 +1,14 @@
+:root {
+  --colorPrimary: rgb(250, 230, 130);
+  --colorSecondary: rgb(210, 130, 250);
+}
+
 html,
 body {
-  padding: 0;
+  background-color: var(--colorPrimary);
+  font-family: 'Ultra', serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
 }
 
 a {
