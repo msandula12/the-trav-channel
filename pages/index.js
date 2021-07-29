@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>The Trav Channel</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,7 +17,7 @@ const Home = () => {
           <div className={styles.channel}>channel</div>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 
