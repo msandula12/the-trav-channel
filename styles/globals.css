@@ -1,12 +1,13 @@
 :root {
   --colorPrimary: rgb(250, 230, 130);
   --colorSecondary: rgb(210, 130, 250);
+  --colorDark: #333;
 }
 
 html,
 body {
   background-color: var(--colorPrimary);
-  color: #333;
+  color: var(--colorDark);
   font-family: 'Ultra', serif;
   margin: 0;
   padding: 0;
