@@ -1,13 +1,5 @@
-import CustomHead from '../components/CustomHead';
-
 const About = () => {
-  return (
-    <div>
-      <CustomHead />
-
-      <main>Coming soon...</main>
-    </div>
-  );
+  return <main>Coming soon...</main>;
 };
 
 export default About;
