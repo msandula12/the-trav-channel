@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import styles from '../styles/Home.module.css';
+
 const Home = () => {
   return (
     <div>
@@ -8,7 +10,13 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>the trav channel</main>
+      <main className={styles.home}>
+        <div>
+          <div className={styles.the}>the</div>
+          <div className={styles.trav}>trav</div>
+          <div className={styles.channel}>channel</div>
+        </div>
+      </main>
     </div>
   );
 };

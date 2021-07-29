@@ -1,0 +1,25 @@
+.home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.the,
+.channel {
+  color: var(--colorSecondary);
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.trav {
+  background: url('https://blog.intostudy.com/wp-content/uploads/2015/07/RoadTrip_GIF.gif');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 141px;
+  line-height: 130px;
+  -webkit-text-stroke: 4px var(--colorSecondary);
+  -webkit-text-fill-color: transparent;
+}
