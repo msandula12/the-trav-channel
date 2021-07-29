@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import Page from '../components/Page';
 
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <Page>
         <Component {...pageProps} />
       </Page>
+      <Footer />
     </div>
   );
 }
