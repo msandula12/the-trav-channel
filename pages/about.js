@@ -1,12 +1,9 @@
-import Head from 'next/head';
+import CustomHead from '../components/CustomHead';
 
 const About = () => {
   return (
     <div>
-      <Head>
-        <title>About - The Trav Channel</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CustomHead />
 
       <main>Coming soon...</main>
     </div>

@@ -1,14 +1,11 @@
-import Head from 'next/head';
+import CustomHead from '../components/CustomHead';
 
 import styles from '../styles/Home.module.css';
 
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>The Trav Channel</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CustomHead />
 
       <main className={styles.home}>
         <div>
