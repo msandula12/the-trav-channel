@@ -1,4 +1,5 @@
 import NavBar from '../components/NavBar';
+import Page from '../components/Page';
 
 import '../styles/globals.css';
 
@@ -6,7 +7,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <NavBar />
-      <Component {...pageProps} />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
     </>
   );
 }
