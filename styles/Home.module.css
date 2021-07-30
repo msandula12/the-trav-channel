@@ -1,5 +1,5 @@
 .logo {
-  font-family: 'Ultra', serif;
+  font-family: var(--fontDisplay);
 }
 
 .logoTextPlain {
