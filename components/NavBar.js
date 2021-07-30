@@ -4,6 +4,22 @@ import { useRouter } from 'next/router';
 
 import styles from './NavBar.module.css';
 
+const CloseIcon = (
+  <svg viewBox="0 0 100 100" width="30" height="30">
+    <rect width="100" height="10"></rect>
+    <rect y="30" width="100" height="10"></rect>
+    <rect y="60" width="100" height="10"></rect>
+  </svg>
+);
+
+const MenuIcon = (
+  <svg viewBox="0 0 100 100" width="30" height="30">
+    <rect width="100" height="10"></rect>
+    <rect y="30" width="100" height="10"></rect>
+    <rect y="60" width="100" height="10"></rect>
+  </svg>
+);
+
 const menu = [
   {
     title: 'Home',
@@ -31,77 +47,51 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
+  const closeMenu = () => {
+    if (!isMenuOpen) {
+      return;
+    }
+    setIsMenuOpen(false);
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
-  const CloseIcon = (
-    <svg viewBox="0 0 100 100" width="30" height="30">
-      <rect width="100" height="10"></rect>
-      <rect y="30" width="100" height="10"></rect>
-      <rect y="60" width="100" height="10"></rect>
-    </svg>
-  );
-
-  const MenuIcon = (
-    <svg viewBox="0 0 100 100" width="30" height="30">
-      <rect width="100" height="10"></rect>
-      <rect y="30" width="100" height="10"></rect>
-      <rect y="60" width="100" height="10"></rect>
-    </svg>
-  );
+  const NavItems = menu.map((page) => (
+    <li key={page.title} className={styles.navListItem} onClick={closeMenu}>
+      <Link href={page.path}>
+        <a
+          className={`${styles.navLink} ${
+            router.pathname === page.path ? styles.active : ''
+          }`}
+        >
+          {page.title}
+        </a>
+      </Link>
+    </li>
+  ));
 
   return (
-    <nav>
+    <>
       {/* Desktop */}
-      <ul className={styles.navList}>
-        {menu.map((page) => (
-          <li key={page.title} className={styles.navListItem}>
-            <Link href={page.path}>
-              <a
-                className={`${styles.navLink} ${
-                  router.pathname === page.path ? styles.active : ''
-                }`}
-              >
-                {page.title}
-              </a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {/* Tablet and smaller */}
-      <div className={styles.navMenuMobile}>
+      <nav className={styles.navDesktop}>
+        <ul className={styles.navList}>{NavItems}</ul>
+      </nav>
+      {/* Tablet/Mobile */}
+      <div className={styles.navMobile}>
+        <h2>the trav channel</h2>
         <div className={styles.navMenuIcon} onClick={toggleMenu}>
           {MenuIcon}
         </div>
-        <div
-          className={isMenuOpen ? styles.navListMobileWrapper : 'display-none'}
-        >
+        <div className={isMenuOpen ? styles.navMenuScreen : 'display-none'}>
           <div className={styles.navCloseIcon} onClick={toggleMenu}>
             {CloseIcon}
           </div>
-          <ul className={styles.navListMobile}>
-            {menu.map((page) => (
-              <li
-                key={page.title}
-                className={styles.navListItem}
-                onClick={toggleMenu}
-              >
-                <Link href={page.path}>
-                  <a
-                    className={`${styles.navLink} ${
-                      router.pathname === page.path ? styles.active : ''
-                    }`}
-                  >
-                    {page.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <ul className={styles.navList}>{NavItems}</ul>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 

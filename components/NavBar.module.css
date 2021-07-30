@@ -1,3 +1,14 @@
+.navDesktop {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navMobile {
+  display: none;
+}
+
 .navList {
   display: flex;
   justify-content: center;
@@ -5,12 +16,12 @@
   padding: 0;
 }
 
-.navListItem:not(:first-of-type) {
+.navDesktop .navListItem:not(:first-of-type) {
   margin-left: 2rem;
 }
 
 .navLink {
-  font-family: 'Ultra', serif;
+  font-family: var(--fontDisplay);
   padding: 0.5rem;
   transition: box-shadow 0.2s ease-in, color 0.2s ease-in;
 }
@@ -24,19 +35,16 @@
   color: var(--colorSecondary);
 }
 
-.navMenuMobile {
-  display: none;
-}
-
 /* Tablet and smaller */
 @media screen and (max-width: 767px) {
-  .navList {
+  .navDesktop {
     display: none;
   }
 
-  .navMenuMobile {
+  .navMobile {
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 1rem;
   }
 
@@ -44,32 +52,27 @@
     cursor: pointer;
   }
 
-  .navListMobileWrapper {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--colorPrimary);
-    z-index: 100;
-    display: flex;
+  .navMenuScreen {
     align-items: center;
+    background-color: var(--colorPrimary);
+    display: flex;
+    height: 100%;
     justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
   }
 
   .navCloseIcon {
     cursor: pointer;
     position: fixed;
-    top: 1rem;
     right: 1rem;
+    top: 1rem;
   }
 
-  .navListMobile {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-
+  .navList {
     align-items: center;
     flex-direction: column;
   }
