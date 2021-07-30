@@ -43,4 +43,39 @@
   .navMenuIcon {
     cursor: pointer;
   }
+
+  .navListMobileWrapper {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--colorPrimary);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navCloseIcon {
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .navListMobile {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navListItem:not(:first-of-type) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }

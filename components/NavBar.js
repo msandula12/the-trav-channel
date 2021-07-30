@@ -35,8 +35,16 @@ const NavBar = () => {
     setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
+  const CloseIcon = (
+    <svg viewBox="0 0 100 100" width="30" height="30">
+      <rect width="100" height="10"></rect>
+      <rect y="30" width="100" height="10"></rect>
+      <rect y="60" width="100" height="10"></rect>
+    </svg>
+  );
+
   const MenuIcon = (
-    <svg viewBox="0 0 100 80" width="30" height="30">
+    <svg viewBox="0 0 100 100" width="30" height="30">
       <rect width="100" height="10"></rect>
       <rect y="30" width="100" height="10"></rect>
       <rect y="60" width="100" height="10"></rect>
@@ -65,6 +73,32 @@ const NavBar = () => {
       <div className={styles.navMenuMobile}>
         <div className={styles.navMenuIcon} onClick={toggleMenu}>
           {MenuIcon}
+        </div>
+        <div
+          className={isMenuOpen ? styles.navListMobileWrapper : 'display-none'}
+        >
+          <div className={styles.navCloseIcon} onClick={toggleMenu}>
+            {CloseIcon}
+          </div>
+          <ul className={styles.navListMobile}>
+            {menu.map((page) => (
+              <li
+                key={page.title}
+                className={styles.navListItem}
+                onClick={toggleMenu}
+              >
+                <Link href={page.path}>
+                  <a
+                    className={`${styles.navLink} ${
+                      router.pathname === page.path ? styles.active : ''
+                    }`}
+                  >
+                    {page.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>

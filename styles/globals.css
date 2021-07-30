@@ -46,6 +46,10 @@ a {
   justify-content: center;
 }
 
+.display-none {
+  display: none;
+}
+
 .zoom-in {
   animation: zoomIn 0.6s ease-out forwards;
 }
