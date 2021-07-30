@@ -23,3 +23,24 @@
   box-shadow: 0 4px 0 var(--colorSecondary);
   color: var(--colorSecondary);
 }
+
+.navMenuMobile {
+  display: none;
+}
+
+/* Tablet and smaller */
+@media screen and (max-width: 767px) {
+  .navList {
+    display: none;
+  }
+
+  .navMenuMobile {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .navMenuIcon {
+    cursor: pointer;
+  }
+}
