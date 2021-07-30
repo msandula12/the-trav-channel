@@ -80,7 +80,9 @@ const NavBar = () => {
       </nav>
       {/* Tablet/Mobile */}
       <div className={styles.navMobile}>
-        <h2>the trav channel</h2>
+        <Link href="/" passHref>
+          <h2 className="cursor">the trav channel</h2>
+        </Link>
         <div className={styles.navMenuIcon} onClick={toggleMenu}>
           {MenuIcon}
         </div>

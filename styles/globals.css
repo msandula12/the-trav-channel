@@ -60,6 +60,10 @@ h2 {
   justify-content: center;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .display-none {
   display: none;
 }
