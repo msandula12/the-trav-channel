@@ -55,6 +55,7 @@
   .navMenuScreen {
     align-items: center;
     background-color: var(--colorPrimary);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
     display: flex;
     height: 100%;
     justify-content: center;

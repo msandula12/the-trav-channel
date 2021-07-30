@@ -86,7 +86,11 @@ const NavBar = () => {
         <div className={styles.navMenuIcon} onClick={toggleMenu}>
           {MenuIcon}
         </div>
-        <div className={isMenuOpen ? styles.navMenuScreen : 'display-none'}>
+        <div
+          className={
+            isMenuOpen ? `${styles.navMenuScreen} slide-down` : 'display-none'
+          }
+        >
           <div className={styles.navCloseIcon} onClick={toggleMenu}>
             {CloseIcon}
           </div>
